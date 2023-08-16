@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import './styles/login.css'
 import { Link, useNavigate } from 'react-router-dom'
-import axios from 'axios'
+import { apiLogin } from '../api/api'
 
 
 
@@ -13,32 +13,18 @@ const Login = () => {
   const navigate = useNavigate()
 
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const userData = {
         email: email,
         password: password
 
     };
-    try {
-      const res = axios.post("http://localhost:8000/login/", userData)
-      .then(res => {
-        console.log(res.data.status)
-
-        if(res.data.status == 'error'){
-          alert("Invalid Credentials")
-        }
-        else{
-          navigate('/home')
-        }
-        // alert("User Created Successfully")
-        // // eslint-disable-next-line no-restricted-globals
-        // navigate('/home')
-    })
-     
-    
-    } catch (err) {
-      console.error(err);
+    if(await apiLogin(userData)){
+        navigate('/home')
+    }
+    else{
+      alert("Invalid credentials")
     }
   };
 

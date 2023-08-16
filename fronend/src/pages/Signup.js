@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./styles/signup.css";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
+import { apiSignup } from "../api/api";
 
 const Signup = () => {
 
@@ -13,7 +14,7 @@ const Signup = () => {
   const [confirmPassword, setConfirmPassword] = useState('')
   const [isMentor, setIsMentor] = useState(false)
   
-  const handleSubmit = (event) =>{
+  const  handleSubmit = async (event) =>{
     event.preventDefault()
 
     if (password !== confirmPassword) {
@@ -29,18 +30,13 @@ const Signup = () => {
         is_mentor: isMentor
 
     };
-
-    axios.post('http://127.0.0.1:8000/register', userData)
-    .then(res => {
-        console.log(res.data)
-        alert("User Created Successfully")
-        // eslint-disable-next-line no-restricted-globals
-        navigate('/login')
-    })
-    .catch(error => {
-        console.log(error)
-        alert("Error creating user")
-    })
+if(await apiSignup(userData)){
+  alert("User successfully created")
+  navigate('/login')
+}
+else{
+  alert("Failed to register")
+}
   }
 
   return (

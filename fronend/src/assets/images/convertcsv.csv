@@ -1,0 +1,11 @@
+id,company_logo,company_name,company_desc,is_remote_available,role,salary,location
+1,http://example.com/logo1.png,Tech Innovators,Revolutionizing technology solutions for a better tomorrow.,true,Software Engineer,"$100,000","San Francisco, CA"
+2,http://example.com/logo2.png,Global Enterprises,Leading provider of business services worldwide.,false,Business Analyst,"$85,000","New York, NY"
+3,http://example.com/logo3.png,EcoTech Solutions,Creating sustainable tech solutions for a greener planet.,true,Environmental Scientist,"$70,000","Seattle, WA"
+4,http://example.com/logo4.png,FashionFusion,Fusing fashion and technology for the ultimate style experience.,true,Fashion Tech Designer,"$90,000","Los Angeles, CA"
+5,http://example.com/logo5.png,HealthWave,Empowering healthier lives through cutting-edge health solutions.,false,Healthcare Data Analyst,"$75,000","Boston, MA"
+6,http://example.com/logo6.png,FoodTech Innovations,Transforming the way we produce and consume food with technology.,true,Food Scientist,"$80,000","Austin, TX"
+7,http://example.com/logo7.png,FinanceFirst Corp,Empowering financial growth through innovative solutions.,false,Financial Advisor,"$110,000","Chicago, IL"
+8,http://example.com/logo8.png,TravelMasters,Creating memorable travel experiences with a touch of luxury.,true,Travel Coordinator,"$65,000","Miami, FL"
+9,http://example.com/logo9.png,InnoTech Labs,Pushing the boundaries of innovation in technology research.,true,Research Scientist,"$95,000","Palo Alto, CA"
+10,http://example.com/logo10.png,UrbanGrowth Solutions,Driving urban development through sustainable and smart solutions.,false,Urban Planner,"$85,000","Seattle, WA"
