@@ -31,9 +31,6 @@ const Login = () => {
         else{
           navigate('/home')
         }
-        // alert("User Created Successfully")
-        // // eslint-disable-next-line no-restricted-globals
-        // navigate('/home')
     })
      
     
