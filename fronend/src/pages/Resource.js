@@ -1,4 +1,5 @@
 import React from 'react'; // Import React, you don't need to import everything with '*'
+import Header from '../components/Header';
 import Box from '@mui/material/Box'; // Import the 'Box' component
 import Typography from '@mui/material/Typography'; // Import the 'Typography' component'
 import Resume from '../images/Resume.png';
@@ -18,9 +19,10 @@ const imageStyle = {
 export default function BoxSx() {
   return (
     <div> {/* Wrap multiple components in a single parent */}
+      <Header />
       <Box>
       <Box sx={{display:"inline-block",top:"122px"}}>
-        <Typography sx={{pl:"280px",fontFamily:"inter",fontWeight:600,fontSize:"20px",lineHeight:"24.2px"}} >
+        <Typography sx={{pl:"280px",fontWeight:600,fontSize:"20px",lineHeight:"24.2px"}} >
           Resource Hub
         </Typography>
         <Box pl={"280px"} mt={"20px"}>

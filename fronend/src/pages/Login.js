@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import './styles/login.css'
 import { Link, useNavigate } from 'react-router-dom'
 import { apiLogin } from '../api/api'
+import { useGlobalStore } from '../store'
 
 
 
@@ -10,6 +11,7 @@ const Login = () => {
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const {setUser} = useGlobalStore()
   const navigate = useNavigate()
 
 
@@ -21,7 +23,8 @@ const Login = () => {
 
     };
     if(await apiLogin(userData)){
-        navigate('/home')
+        setUser({email, password});
+        navigate('/')
     }
     else{
       alert("Invalid credentials")

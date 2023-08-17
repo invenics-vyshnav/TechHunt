@@ -1,6 +1,7 @@
 import React from 'react';
 import { Box, Button, Typography } from '@mui/material';
 import Header from '../components/Header';
+import { Link } from 'react-router-dom';
 
 // Common styles
 const commonStyles = {
@@ -12,17 +13,16 @@ const commonStyles = {
 
 const Home = () => {
   return (
-    
     <Box>
       <Header />
       <Box
         sx={{
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          textAlign: 'center',
-          mt: '3rem',
-          px: '2rem',
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          textAlign: "center",
+          mt: "3rem",
+          px: "2rem",
         }}
       >
         <Typography
@@ -30,11 +30,11 @@ const Home = () => {
           sx={{
             ...commonStyles,
             color: "#000000",
-            ml: "auto", 
+            ml: "auto",
             mr: "auto",
           }}
         >
-         We Grow Careers 
+          We Grow Careers
         </Typography>
 
         <Typography
@@ -42,23 +42,23 @@ const Home = () => {
           sx={{
             ...commonStyles,
             color: "#000000",
-            mt: "1rem", // Add a bit of margin between the two headings
+            mt: " 0px", // Add a bit of margin between the two headings
           }}
         >
-         Start your search with us
+          Start your search with us
         </Typography>
       </Box>
       <Box mb={{ xs: "1rem", md: "1rem" }} mt={{ lg: "1rem" }}>
-        <Box  >
+        <Box>
           <Typography
             textAlign={"center"}
             variant="body1"
             sx={{
               color: "#6B6868",
-              fontSize: "18px",
+              fontSize: "16px",
               fontWeight: "500",
               lineHeight: "19.5px",
-              ml:"2rem"
+              ml: "2rem",
             }}
           >
             Embark on a journey of self-discovery with TechHunt. Explore
@@ -70,7 +70,7 @@ const Home = () => {
             variant="body1"
             sx={{
               color: "#6B6868",
-              fontSize: "18px",
+              fontSize: "16px",
             }}
           >
             endless career possibilities and find your path with us
@@ -81,8 +81,8 @@ const Home = () => {
       <Box mt="1rem" display="flex" justifyContent="center">
         <Box
           sx={{
-            display: { xs: 'none', md: 'flex' },
-            color: 'white',
+            display: { xs: "none", md: "flex" },
+            color: "white",
             ml: "4rem",
             backgroundColor: "blue",
             borderRadius: "10px",
@@ -92,19 +92,53 @@ const Home = () => {
             ...commonStyles,
           }}
         >
-          <Button color="inherit" sx={{fontWeight:"700",fontSize: "12px",textTransform:'capitalize'}}>Explore Jobs</Button>
+          <Button
+            color="inherit"
+            sx={{
+              fontWeight: "700",
+              fontSize: "12px",
+              textTransform: "capitalize",
+            }}
+          >
+            <Button
+              color="inherit"
+              sx={{
+                fontWeight: "700",
+                fontSize: "12px",
+                textTransform: "capitalize",
+              }}
+            >
+              <Link
+                to="/jobs"
+                style={{ textDecoration: "none", color: "white" }}
+              >
+                Explore Jobs
+              </Link>
+            </Button>
+          </Button>
         </Box>
         <Box
           sx={{
-            display: { xs: 'none', md: 'flex' },
+            display: { xs: "none", md: "flex" },
             borderRadius: "10px",
-            border: '2px solid black',
+            border: "2px solid black",
             justifyContent: "center",
             width: "150px",
             ...commonStyles,
           }}
         >
-          <Button color="inherit" sx={{fontWeight:"700",fontSize: "12px",textTransform:'capitalize'}}>Navigate more</Button>
+          <Button
+            color="inherit"
+            sx={{
+              fontWeight: "700",
+              fontSize: "12px",
+              textTransform: "capitalize",
+            }}
+          >
+            <Link to="/resources" style={{ textDecoration: "none", color: "black" }}>
+              Resources
+            </Link>
+          </Button>
         </Box>
       </Box>
     </Box>

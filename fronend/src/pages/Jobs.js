@@ -4,6 +4,8 @@ import Fuse from "fuse.js";
 import { useQuery } from "react-query";
 import { apiGetAllJobs } from "../api/api";
 import "./styles/jobs.css";
+import Header from "../components/Header";
+import { RingLoader } from "react-spinners";
 
 const fuseConfig = {
   keys: ["role", "location", "company_name"],
@@ -12,7 +14,14 @@ const fuseConfig = {
 const Jobs = () => {
   const [search, setSearch] = useState("");
   const { isLoading, error, data } = useQuery("jobs", apiGetAllJobs);
-  if (isLoading) return "Loading...";
+  if (isLoading) return(
+  <div>
+    <Header />
+    <div style={{display: 'flex', justifyContet: 'center', alignItems: 'center', marginLeft: '50%', marginRight: '50%', marginTop: "100px"}}>
+      <RingLoader color="#2521FF" />
+</div>
+</div>
+) ;
 
   if (error) return "An error has occurred: " + error.message;
 
@@ -23,6 +32,7 @@ const Jobs = () => {
   console.log(jobs);
   return (
     <div className="job-all-root">
+      <Header />
       <div className="job-all-header">
         <div className="job-all-heading">Explore Jobs </div>
 
