@@ -22,13 +22,20 @@ const Jobs = () => {
     search === "" ? data : fuse.search(search).map((result) => result.item);
   console.log(jobs);
   return (
-    <div>
-      <input
-        type="text"
-        value={search}
-        onChange={(e) => setSearch(e.target.value)}
-      ></input>
-      <button>Search</button>
+    <div className="job-all-root">
+      <div className="job-all-header">
+        <div className="job-all-heading">Explore Jobs </div>
+
+        <div>
+          <input
+          className="job-search-inpfield"
+            type="text"
+            value={search}
+            placeholder="Search role, title, or location.."
+            onChange={(e) => setSearch(e.target.value)}
+          ></input>
+        </div>
+      </div>
       <div className="job-all-container">
         {jobs.map((job) => (
           <JobComp
