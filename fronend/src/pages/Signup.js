@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "./styles/signup.css";
 import { Link, useNavigate } from "react-router-dom";
-import axios from "axios";
 import { apiSignup } from "../api/api";
 
 const Signup = () => {
