@@ -28,6 +28,7 @@ export const apiGetAllJobs = async () => {
     try{
         const response = await axios.get(serverUrl+"/jobs")
         return response.data
+        
     }
     catch (e){
         console.error(e)

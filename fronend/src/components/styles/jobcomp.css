@@ -1,4 +1,118 @@
 .jobcomp-container{
-    border: 1px solid grey;
+    border: 1px solid #C4C4C4;
+    cursor: pointer;
+    width: 701px;
+    height: 163px;
+    border-radius: 10px;
+    color: #6B6868;
+    font-weight: 400;
+}
+
+.jobcomp-topsec{
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    margin-top: 15px;
+    margin-left: 15px;
+}
+
+.jobcomp-logo-container{
+    width: 50px;
+    height: 50px;
+    border: 1px solid #C4C4C4;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.jobcomp-compdetails{
+    display: flex;
+    flex-direction: row;     
+    column-gap: 10px;
+}
+
+.jobcomp-details{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    row-gap: 5px;
+}
+
+.jobcomp-title{
+    font-size: 16px;
+    font-weight: 600;
+    color: black;
+}
+
+.jobcomp-logo{
+    width: 35px;
+    height: 35px;
+}
+
+.jobcomp-desc{
+    font-size: 12px;
+}
+
+.jobcomp-remote{
+    font-size: 12px;
+}
+
+.jobcomp-botsec{
+    width: 100% auto;
+    margin: 15px;
+    border: 1px solid #C4C4C4;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.jobcomp-botsec-left{
+    display: flex;
+    flex-direction: row;
+    margin: 15px;
+    column-gap: 15px;
+    font-size: 12px;
+    align-items: center;
+}
+
+.jobcomp-role{
+    font-size: 14px;
+    font-weight: 600;
+    color: black;
+}
+
+.jobcomp-botsec-right{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    column-gap: 8px;
+}
+
+.jobcomp-btn-view{
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid #000;
+    background-color: white;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.jobcomp-btn-apply{
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    background-color: white;
+    font-size: 12px;
+    font-weight: 600;
+    background-color: #2521FF;
+    color: white;
+    margin-right: 15px;
     cursor: pointer;
 }
