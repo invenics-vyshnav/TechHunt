@@ -1,9 +1,11 @@
 import React from 'react'
+import Header from '../components/Header'
 
 const Networking = () => {
   return (
     <div>
-      Networking
+    <Header />
+      Work in progress....
     </div>
   )
 }
