@@ -52,6 +52,9 @@
 
 .jobcomp-desc{
     font-size: 12px;
+    overflow: hidden;
+    width: 600px;
+    height: 17px;
 }
 
 .jobcomp-remote{

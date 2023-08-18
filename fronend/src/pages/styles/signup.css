@@ -58,6 +58,7 @@
     height: 42px;
     border: none;
     color: white;
+    cursor: pointer;
   }
   .signup-checkbox-sec{
     display: flex;

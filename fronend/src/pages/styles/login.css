@@ -58,6 +58,7 @@
     height: 42px;
     border: none;
     color: white;
+    cursor: pointer;
   }
   .login-checkbox-sec{
     display: flex;

@@ -9,6 +9,7 @@ const JobComp = ({
   role,
   salary,
   location,
+  apply_link,
 }) => {
   return (
     <div className="jobcomp-root">
@@ -37,8 +38,10 @@ const JobComp = ({
           </div>
 
           <div className="jobcomp-botsec-right">
-            <button className="jobcomp-btn-view">View More</button>
-            <button className="jobcomp-btn-apply">Apply</button>
+            <button className="jobcomp-btn-view"  onClick={() => {window.open(`${apply_link}`)}} >View More</button>
+            <button className="jobcomp-btn-apply" onClick={() => {window.open(`${apply_link}`)
+                  console.log(apply_link)
+          }} >Apply</button>
           </div>
         </div>
       </div>

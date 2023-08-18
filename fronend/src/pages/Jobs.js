@@ -56,6 +56,7 @@ const Jobs = () => {
             role={job.role}
             salary={job.salary}
             location={job.location}
+            apply_link={job.apply_link}
           />
         ))}
       </div>
